@@ -9,18 +9,18 @@ $(document).ready(function() {
     var result2 = $("input:radio[name=radiofood]:checked").val();
 
     //purple results
-    if (result === 'Purple' && result2 === 'Sparkling Water'){
+    if (result === 'Purple' && result2 === 'Sparkling Water' || result2 === 'Carrots'){
       alert("Your power animal is a Unicorn!")
         $("#unicorn").show();
         $("#centaur").hide();
         $("#phoenix").hide();
     }
-    else if (result === 'Purple' && result2 === 'Carrots'){
-      alert("Your power animal is a Unicorn")
-      $("#unicorn").show();
-      $("#centaur").hide();
-      $("#phoenix").hide();
-    }
+    // else if (result === 'Purple' && result2 === 'Carrots'){
+    //   alert("Your power animal is a Unicorn")
+    //   $("#unicorn").show();
+    //   $("#centaur").hide();
+    //   $("#phoenix").hide();
+    // }
     else if (result === 'Purple' && result2 === 'Meat'){
       alert("Your power animal is a Centaur")
         $("#centaur").show();
