@@ -1,72 +1,46 @@
-//back-end
-
-//front-end
-
 $(document).ready(function() {
   $("form").submit(function(event) {
 
     var result = $("input:radio[name=radiocolor]:checked").val();
     var result2 = $("input:radio[name=radiofood]:checked").val();
 
-    //purple results
-    if (result === 'Purple' && result2 === 'Sparkling Water' || result2 === 'Carrots'){
-      alert("Your power animal is a Unicorn!")
+// Unicorn results
+    if (result === 'purple' && result2 === 'Sparkling Water' || result === 'red' && result2 === 'Sparkling Water'){
         $("#unicorn").show();
         $("#centaur").hide();
         $("#phoenix").hide();
+        $("form").slideUp();
     }
-    // else if (result === 'Purple' && result2 === 'Carrots'){
-    //   alert("Your power animal is a Unicorn")
-    //   $("#unicorn").show();
-    //   $("#centaur").hide();
-    //   $("#phoenix").hide();
-    // }
-    else if (result === 'Purple' && result2 === 'Meat'){
-      alert("Your power animal is a Centaur")
+//Centaur results
+    else if (result === 'purple' && result2 === 'Meat' || result2 === 'Carrots'|| result === 'green' && result2 === 'Sparkling Water' || result === 'green' && result2 === 'Carrots'){
         $("#centaur").show();
         $("#unicorn").hide();
         $("#phoenix").hide();
+        $("form").slideUp();
     }
-    //red results:
-    else if (result === 'Red' && result2 === 'Sparkling Water') {
-      alert("Your power animal is a Unicorn.")
-      $("#unicorn").show();
+//Phoenix results
+    else if (result === 'red' && result2 === 'Carrots' || result === 'red' && result2 === 'Meat' || result === 'green' && result2 === 'Meat') {
       $("#centaur").hide();
-      $("#phoenix").hide();
-    }
-    else if (result === 'Red' && result2 === 'Carrots') {
-      alert("Your power animal is a Phoenix")
-        $("#phoenix").show();
-        $("#unicorn").hide();
-        $("#centaur").hide();
-    }
-    else if (result === 'Red' && result2 === 'Meat') {
-      alert("Your power animal is a Phoenix")
+      $("#unicorn").hide();
       $("#phoenix").show();
-      $("#unicorn").hide();
-      $("#centaur").hide();
+      $("form").slideUp();
     }
-    //green results:
-    else if (result === 'Green' && result2 === 'Sparkling Water'){
-      alert("Your power animal is a Centaur")
-      $("#centaur").show();
-      $("#unicorn").hide();
-      $("#phoenix").hide();
-    }
-    else if (result === 'Green' && result2 === 'Carrots'){
-      alert("Your power animal is a Centaur")
-      $("#centaur").show();
-      $("#unicorn").hide();
-      $("#phoenix").hide();
-    }
-    else if (result === 'Green' && result2 === 'Meat'){
-      alert("Your power animal is a Phoenix")
-      $("#phoenix").show();
-      $("#unicorn").hide();
-      $("#centaur").hide();
-    }
-
     event.preventDefault();
+  });
+
+  $("#phoenix").click(function(){
+    $("form").slideDown();
+    $("#phoenix").hide();
+  });
+
+  $("#unicorn").click(function(){
+    $("form").slideDown();
+    $("#unicorn").hide();
+  });
+
+  $("#centaur").click(function(){
+    $("form").slideDown();
+    $("#centaur").hide();
   });
 
 });

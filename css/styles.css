@@ -9,3 +9,30 @@
 #centaur {
   display: none;
 }
+
+h1, h2, h3, h4 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 2px 2px 0px black;
+}
+
+form {
+  padding: 50px;
+  border: 2px dashed black;
+  background-image: url(../img/background.jpg);
+  color: white;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 10px 10px 5px 0px #6e6e6e;
+
+}
